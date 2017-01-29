@@ -1,0 +1,39 @@
+body {
+	background-color: #000;
+	font: 30px sans-serif;
+	margin:0;
+}
+canvas {
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+	position:absolute;
+	top:0;
+	width:100%;
+}
+.main{
+	position:absolute;
+	top:50%;
+	margin-top:-36px;
+	left:50%;
+	margin-left:-176px;
+}
+h1{
+	font-family: 'Lato', sans-serif;
+	margin:0;
+	color:#fff;
+	font-weight:100;
+}
+
+/*Responsive styles*/
+
+@media screen and (max-width:600px){
+	.main{
+		top:30%;
+		margin-top:-27px;
+		margin-left:-132px;
+	}
+	h1{
+		font-size:1.5em;
+	}
+}
