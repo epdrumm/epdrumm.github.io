@@ -31,12 +31,28 @@ p {
 	margin: 0 0 1rem 0;
 }
 
+ul li, ul li p {
+	color: #333;
+}
+
 h1{
 	font-family: 'Merriweather', Georgia, serif;
 	font-size: 1.444rem;
 	margin: 0 0 .66667rem 0;
 	color:#18709c;
 	font-weight:300;
+}
+
+main.about h1 {
+	color: #18709c;
+}
+
+main.portfolio h1 {
+	color: #19bdc4;
+}
+
+main.contact h1 {
+	color: #ef4089;
 }
 
 
@@ -99,11 +115,11 @@ nav.primary li a.active {
 	border-bottom: 4px solid #18709c;
 }
 
-nav.primary li a.active[href~="portfolio"] {
+nav.primary li a.active[href*="portfolio"] {
 	border-color: #19bdc4;
 }
 
-nav.primary li a.active[href~="contact"] {
+nav.primary li a.active[href*="contact"] {
 	border-color: #ef4089;
 }
 
@@ -154,12 +170,41 @@ main:not(.home) {
 	margin-top: 4.4444rem;
 }
 
+.social-links {
+	list-style: none;
+	padding: 0;
+}
+
+.social-links li a {
+	text-decoration: none;
+}
+
+.social-links li a[href*="twitter"] {
+	color: #00bff3;
+}
+
+.social-links li a[href*="dribbble"] {
+	color: #ef4089;
+}
+
+.social-links li a[href*="linkedin"] {
+	color: #0054a6;
+}
 
 /*Responsive styles*/
+
+@media screen and (min-width:800px){
+	.wrapper {
+		padding: 0 2rem;
+	}
+}
 
 @media screen and (min-width:1024px){
 	.wrapper {
 		max-width: 100%;
+		main.about .wrapper, main.contact .wrapper {
+			padding: 0 11.1111rem;
+		}
 	}
 	.intro {
 		padding: 4.44444rem 8.8888rem 7.2222rem 8.88888rem;
