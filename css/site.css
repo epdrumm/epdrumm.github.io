@@ -148,6 +148,12 @@ nav.primary li a.active[href~="contact"] {
 
 
 
+/* ====== INTERIOR STYLES ====== */
+
+main:not(.home) {
+	margin-top: 4.4444rem;
+}
+
 
 /*Responsive styles*/
 
