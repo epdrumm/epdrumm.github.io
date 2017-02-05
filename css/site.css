@@ -42,6 +42,15 @@ ul li, ul li p {
 	color: #333;
 }
 
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 h1{
 	font-family: 'Merriweather', Georgia, serif;
 	font-size: 1.444rem;
@@ -169,19 +178,25 @@ main:not(.home) {
 	padding: 0;
 }
 
-.social-links li a {
-	text-decoration: none;
+.social-links li {
+	margin-bottom: .666rem;
 }
 
-.social-links li a[href*="twitter"] {
+.social-links li a {
+	text-decoration: none;
+	display: inline-block;
+	margin-left: .2777rem;
+}
+
+.social-links li a[href*="twitter"], .icon-twitter {
 	color: #00bff3;
 }
 
-.social-links li a[href*="dribbble"] {
+.social-links li a[href*="dribbble"], .icon-dribbble {
 	color: #ef4089;
 }
 
-.social-links li a[href*="linkedin"] {
+.social-links li a[href*="linkedin"], .icon-linkedin2 {
 	color: #0054a6;
 }
 
