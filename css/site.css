@@ -4,7 +4,14 @@
 /*Teal: #19bdc4*/
 /*Pink: #ef4089*/
 
-html { font-size: 18px; }
+html {
+	font-size: 18px;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
 	background-color: #fff;
@@ -67,6 +74,7 @@ a {
 
 .wrapper {
 	margin: 0 auto;
+	padding: 0 1rem;
 }
 
 
@@ -79,17 +87,12 @@ header {
 
 header a.home {
 	display: inline-block;
-	float: left;
 	font-family: 'Open Sans', Arial, sans-serif;
-	font-size: 1.444rem;
+	font-size: 1rem;
 	font-weight: 300;
-	line-height: 85px;
+	padding: 1rem 0;
 	color: #333;
 	text-decoration: none;
-}
-
-nav.primary {
-	float: right;
 }
 
 nav.primary ul {
@@ -105,35 +108,30 @@ nav.primary li {
 nav.primary li a {
 	font-family: 'Merriweather', Georgia, serif;
 	text-decoration: none;
-	line-height: 85px;
+	padding: 1.444rem 1rem;
+	padding: 0 .5rem 1rem .5rem;
 	color: #333;
-	padding: 0 1rem;
 	display: inline-block;
 }
 
-nav.primary li a.active {
+nav.primary li a.active, nav.primary li a:hover {
 	border-bottom: 4px solid #18709c;
 }
 
-nav.primary li a.active[href*="portfolio"] {
+nav.primary li a[href*="portfolio"].active, nav.primary li a[href*="portfolio"]:hover {
 	border-color: #19bdc4;
 }
 
-nav.primary li a.active[href*="contact"] {
+nav.primary li a[href*="contact"].active, nav.primary li a[href*="contact"]:hover {
 	border-color: #ef4089;
 }
 
 /* ====== HOME STYLES ====== */
 
 .intro {
-	padding: 2rem;
+	padding: 1rem;
 	position: relative;
-	background: url('../images/Emily.jpg') no-repeat right bottom;
-}
-
-.intro .content {
-	float: left;
-	max-width: 60%;
+	margin-top: 1rem;
 }
 
 .intro-border div {
@@ -191,20 +189,43 @@ main:not(.home) {
 
 @media screen and (min-width:460px){
 	.intro {
-		padding: 4.4444rem;
+		padding: 2rem;
+		background: url('../images/Emily.jpg') no-repeat right bottom;
+		background-size: 45%;
+	}
+	.intro .content {
+		float: left;
+		max-width: 60%;
 	}
 }
 
-@media screen and (max-width:600px){
-
-	h1{
-		font-size:1.5em;
+@media screen and (min-width:600px){
+	header a.home {
+		font-size: 1.444rem;
+		padding: 1.444rem 0;
+		height: 85px;
+	}
+	nav.primary {
+		float: right;
+	}
+	nav.primary li {
+		margin-top: 9px;
+	}
+	nav.primary li a {
+		padding: 1.444rem 1rem;
+	}
+	.intro {
+		background-size: contain;
 	}
 }
 
 @media screen and (min-width:800px){
 	.wrapper {
 		padding: 0 2rem;
+	}
+	.intro {
+		margin-top: 2rem;
+		padding: 4.444rem;
 	}
 }
 
