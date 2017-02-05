@@ -231,7 +231,7 @@ main:not(.home) {
 
 @media screen and (min-width:960px){
 	.intro {
-		background-position: 90% bottom;
+		background-position: 82% bottom;
 	}
 }
 
@@ -246,6 +246,6 @@ main:not(.home) {
 		padding: 0 11.1111rem;
 	}
 	.intro {
-		padding: 4.44444rem 8.8888rem 7.2222rem 8.88888rem;
+		padding: 4.44444rem 7.2222rem 7.2222rem 7.2222rem;
 	}
 }
