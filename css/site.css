@@ -126,18 +126,14 @@ nav.primary li a.active[href*="contact"] {
 /* ====== HOME STYLES ====== */
 
 .intro {
-	padding: 4.4444rem;
+	padding: 2rem;
 	position: relative;
+	background: url('../images/Emily.jpg') no-repeat right bottom;
 }
 
-.intro p {
-	width: 60%;
-}
-
-.intro img {
-	position: absolute;
-	bottom: 0;
-	right: 8rem;
+.intro .content {
+	float: left;
+	max-width: 60%;
 }
 
 .intro-border div {
@@ -193,9 +189,28 @@ main:not(.home) {
 
 /*Responsive styles*/
 
+@media screen and (min-width:460px){
+	.intro {
+		padding: 4.4444rem;
+	}
+}
+
+@media screen and (max-width:600px){
+
+	h1{
+		font-size:1.5em;
+	}
+}
+
 @media screen and (min-width:800px){
 	.wrapper {
 		padding: 0 2rem;
+	}
+}
+
+@media screen and (min-width:960px){
+	.intro {
+		background-position: 90% bottom;
 	}
 }
 
@@ -211,12 +226,5 @@ main:not(.home) {
 	}
 	.intro {
 		padding: 4.44444rem 8.8888rem 7.2222rem 8.88888rem;
-	}
-}
-
-@media screen and (max-width:600px){
-
-	h1{
-		font-size:1.5em;
 	}
 }
